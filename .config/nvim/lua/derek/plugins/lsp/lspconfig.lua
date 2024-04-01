@@ -93,19 +93,19 @@ return {
 			},
 		})
 
-    --configure eslint server with plugin
-      lspconfig.eslint.setup {
-        on_attach = function(client, bufnr)
-          vim.api.nvim_create_autocmd("BufWritePre", {
-            buffer = bufnr,
-            command = "EslintFixAll",
-          })
-        end,
-        settings = {
-            workingDirectory = { mode = 'location' },
-        },
-        root_dir = lspconfig.util.find_git_ancestor,
-      }
+		--configure eslint server with plugin
+		lspconfig.eslint.setup({
+			on_attach = function(client, bufnr)
+				vim.api.nvim_create_autocmd("BufWritePre", {
+					buffer = bufnr,
+					command = "EslintFixAll",
+				})
+			end,
+			settings = {
+				workingDirectory = { mode = "location" },
+			},
+			root_dir = lspconfig.util.find_git_ancestor,
+		})
 
 		-- configure css server
 		lspconfig["cssls"].setup({
