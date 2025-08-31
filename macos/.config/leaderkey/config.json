@@ -1,0 +1,72 @@
+{
+  "actions" : [
+    {
+      "key" : "d",
+      "type" : "application",
+      "value" : "/Applications/Brave Browser.app"
+    },
+    {
+      "key" : "s",
+      "type" : "application",
+      "value" : "/Applications/Skim.app"
+    },
+    {
+      "key" : "k",
+      "type" : "application",
+      "value" : "/Applications/kitty.app"
+    },
+    {
+      "key" : "p",
+      "type" : "application",
+      "value" : "/System/Applications/Preview.app"
+    },
+    {
+      "key" : "m",
+      "type" : "application",
+      "value" : "/System/Applications/Messages.app"
+    },
+    {
+      "key" : "e",
+      "type" : "application",
+      "value" : "/Applications/Microsoft Excel.app"
+    },
+    {
+      "actions" : [
+        {
+          "key" : "a",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/almost-maximize"
+        },
+        {
+          "key" : "m",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/maximize"
+        },
+        {
+          "key" : "r",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/right-half"
+        },
+        {
+          "key" : "l",
+          "type" : "url",
+          "value" : "raycast://extensions/raycast/window-management/left-half"
+        }
+      ],
+      "key" : "w",
+      "label" : "window",
+      "type" : "group"
+    },
+    {
+      "key" : "l",
+      "type" : "application",
+      "value" : "/Applications/Leaf Blower Revolution.app"
+    },
+    {
+      "key" : "v",
+      "type" : "application",
+      "value" : "/Applications/Visual Studio Code.app"
+    }
+  ],
+  "type" : "group"
+}

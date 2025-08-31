@@ -1,0 +1,30 @@
+# indentPreamble: 1
+# defaultIndent: "  "
+# removeTrailingWhitespace: 1
+# noAdditionalIndent:
+#   abstract: 1
+# modifyLineBreaks:
+#   preserveBlankLines: 1
+#   condenseMultipleBlankLinesInto: 1
+#   textWrapOptions:
+#     columns: 10
+#     blocksFollow:
+#       other: |-
+#         (?x)
+#            \\\]
+#            |
+#            \\item(?:\h|\[)
+#            |
+#            \\caption\h*(?:\[\])?\h*\{ # <--- new bit
+#
+# indentAfterItems: # <--- new bit
+#   enumerate*: 1 # <--- new bit
+modifyLineBreaks:
+  wrap: 1
+  columns: 20
+  blocksFollow:
+    other: |
+      (?x)       # Regex options for which blocks or items to wrap
+      \\begin\{  # Include environments like \begin{}
+      \\item     # Include item lists
+      .*
