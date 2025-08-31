@@ -1,13 +1,11 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+setopt NO_BEEP
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-export LDFLAGS="-L/opt/homebrew/opt/libxml2/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/libxml2/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/libxml2/lib/pkgconfig"
-export PATH="/opt/homebrew/opt/libxml2/bin:$PATH"
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -77,7 +75,6 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 bindkey '^[[Z' autosuggest-accept
 
@@ -119,15 +116,6 @@ alias lt='ls --tree'
 export EDITOR=nvim
 export VISUAL="$EDITOR"
 
-export DBUS_SESSION_BUS_ADDRESS="unix:path=$DBUS_LAUNCHD_SESSION_BUS_SOCKET"
-export JAVA_HOME="/opt/homebrew/opt/openjdk"
-export JAVA_TOOL_OPTIONS="-Djdk.xml.totalEntitySizeLimit=2000000 --enable-native-access=ALL-UNNAMED"
-DYLD_FALLBACK_LIBRARY_PATH="$(brew --prefix)/lib:$DYLD_FALLBACK_LIBRARY_PATH"
-
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/derek/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -153,5 +141,5 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-eval "$(oh-my-posh init zsh --config ~/.config/omp/omp.toml)"
 eval "$(zoxide init zsh)"
+eval "$(oh-my-posh init zsh --config ~/.config/omp/omp.toml)"

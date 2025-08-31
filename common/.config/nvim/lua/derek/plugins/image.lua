@@ -1,5 +1,6 @@
 return {
 	"3rd/image.nvim",
+	dependencies = { "luarocks.nvim" },
 	opts = {},
 	config = function()
 		require("image").setup( -- image nvim options table. Pass to `require('image').setup`

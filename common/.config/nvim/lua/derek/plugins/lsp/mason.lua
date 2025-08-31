@@ -28,7 +28,6 @@ return {
 				"ts_ls",
 				"html",
 				"cssls",
-				"csharp_ls",
 				"clangd",
 				"tailwindcss",
 				"pyright",
